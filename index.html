@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.13.6/dist/full.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="css/style.css">
+  <html data-theme="night"></html>
+  <title>IPChecker</title>
+</head>
+
+<body>
+  <div class="mv" id="mv">
+      <div class="mv-container">
+        <p class="mv-title">IPChecker</p>
+        <p class="mv-text">
+          試験的テストツール<br>
+        </p>
+        <div class='other-container'>
+          <label for="my-modal" class="btn btn-success" onclick="run_check();">Check!</label>
+          <input type="checkbox" id="my-modal" class="modal-toggle">
+          <div class="modal">
+            <div class="modal-box">
+              <h3 class="font-bold text-lg">Checking YourIP....</h3>
+              <p class='out'>YourIP: <span id='ip_out'></span>
+              <br>
+              <div class="modal-action">
+                <label for="my-modal" class="btn">Close</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <script language="javascript" type="text/javascript">
+    function run_check(){
+      var xml = new XMLHttpRequest
+        xml.open('get','https://ipinfo.io/json')
+        xml.send()
+        xml.addEventListener("load", function(){
+            var json = JSON.parse(this.response)
+            var ip = json.ip
+            document.getElementById('ip_out').innerText = ip
+        }, false)
+      }
+  </script>
+</body>
+
+</html>
