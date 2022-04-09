@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Alata:300,400,700,900');
+body {
+  font-family: 'Alata', 'Noto Sans JP';
+  font-size: 15px;
+  letter-spacing: .05em;
+  color: #f1f3f9;
+}
+
+.mv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 35vh;
+  margin-bottom: 35vh;
+  position: relative;
+}
+.mv-title {
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 5px;
+}
+.mv-text {
+  margin-top: 15px;
+}
+.other-container {
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.out {
+  margin-top: 40px;
+  font-size: 30px;
+}
+#ip_out {
+  color: #c561ff
+}
